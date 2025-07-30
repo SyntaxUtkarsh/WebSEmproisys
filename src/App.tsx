@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import EoRPage from './components/EoRPage';
 import WhyChooseUs from './components/WhyChooseUs';
 import ClientJourney from './components/ClientJourney';
 import Industries from './components/Industries';
@@ -19,6 +20,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <EoRPage />
         <WhyChooseUs />
         <ClientJourney />
         <Industries />
