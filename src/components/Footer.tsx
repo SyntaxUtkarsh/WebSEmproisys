@@ -109,8 +109,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p>© {new Date().getFullYear()} Emproisys. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-[#ff7843] transition-colors duration-300">Privacy Policy</a>
-            <a href="#" className="hover:text-[#ff7843] transition-colors duration-300">Terms of Service</a>
+        
           </div>
         </div>
       </div>

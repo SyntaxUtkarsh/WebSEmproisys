@@ -68,25 +68,20 @@ const WhyChooseUs = () => {
   const stats = [
     {
       icon: <Clock className="h-10 w-10 text-[#ff7843]" />,
-      value: 15,
-      label: 'Years Experience',
+      value: 95,
+      label: 'Years of Collective Experience',
       suffix: '+',
     },
     {
       icon: <Users className="h-10 w-10 text-[#ff7843]" />,
-      value: 250,
+      value: 27,
       label: 'Clients Served',
       suffix: '+',
     },
-    {
-      icon: <TrendingUp className="h-10 w-10 text-[#ff7843]" />,
-      value: 95,
-      label: 'Success Rate',
-      suffix: '%',
-    },
+ 
     {
       icon: <Award className="h-10 w-10 text-[#ff7843]" />,
-      value: 20,
+      value: 11,
       label: 'Expert Consultants',
       suffix: '+',
     },
@@ -108,11 +103,11 @@ const WhyChooseUs = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="flex justify-center gap-8 flex-wrap">
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300"
+              className="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300 min-w-[200px]"
             >
               <div className="flex justify-center mb-4">
                 {stat.icon}

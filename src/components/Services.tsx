@@ -1,21 +1,58 @@
 import React from 'react';
-import { Calculator, CreditCard, Scale, ClipboardCheck, FileCheck } from 'lucide-react';
+import { Calculator, CreditCard, Scale, ClipboardCheck, FileCheck,Globe } from 'lucide-react';
 import SectionTitle from './common/SectionTitle';
 import ServiceCard from './common/ServiceCard';
 
 const Services = () => {
   const services = [
     {
-      title: 'Taxation Services',
-      icon: <Calculator className="h-12 w-12 text-[#1e3d8f]" />,
-      description: 'Comprehensive tax planning, GST compliance, international tax structuring, and transfer pricing services to optimize your tax position.',
+  title: 'Employer of Record (EoR)',
+  icon: <Globe className="h-12 w-12 text-[#1e3d8f]" />,
+  description: 'Compliant hiring of global IT professionals without setting up a local entity. We handle payroll, onboarding, and statutory compliance while your talent works fully on your assignments.',
+  items: [
+    'Global IT talent deployment',
+    'Full-service onboarding & HR compliance',
+    'Payroll, tax, and statutory benefit management',
+    'Ideal for project-based or long-term assignments'
+  ]
+    },
+    
+    {
+
+      title: 'Due Diligence',
+      icon: <ClipboardCheck className="h-12 w-12 text-[#1e3d8f]" />,
+      description: 'Thorough assessment across financial, legal, operational, and commercial dimensions to identify opportunities and mitigate risks.',
       items: [
-        'Tax planning and optimization',
-        'GST compliance and advisory',
-        'International tax structuring',
-        'Transfer pricing'
+        'Financial due diligence',
+        'Legal due diligence',
+        'Operational due diligence',
+        'Commercial due diligence'
+      ]
+     
+    },
+        {
+      title: 'Legal & Commercial Services',
+      icon: <Scale className="h-12 w-12 text-[#1e3d8f]" />,
+      description: 'Complete legal support from business incorporation to contract review, intellectual property protection, and ongoing legal advisory.',
+      items: [
+        'Business incorporation',
+        'Contract drafting and review',
+        'Intellectual property protection',
+        'Legal advisory'
       ]
     },
+        {
+      title: 'Regulatory Compliances',
+      icon: <FileCheck className="h-12 w-12 text-[#1e3d8f]" />,
+      description: 'Navigate India\'s complex regulatory environment with our compliance management, industry-specific regulation handling, and compliance audits.',
+      items: [
+        'Statutory compliance management',
+        'Industry-specific regulations',
+        'Cross-border compliance',
+        'Compliance audits and assessments'
+      ]
+    },
+
     {
       title: 'Financial Consulting',
       icon: <CreditCard className="h-12 w-12 text-[#1e3d8f]" />,
@@ -27,39 +64,20 @@ const Services = () => {
         'Funding strategies'
       ]
     },
+
     {
-      title: 'Legal & Commercial Services',
-      icon: <Scale className="h-12 w-12 text-[#1e3d8f]" />,
-      description: 'Complete legal support from business incorporation to contract review, intellectual property protection, and ongoing legal advisory.',
+     title: 'Taxation Services',
+      icon: <Calculator className="h-12 w-12 text-[#1e3d8f]" />,
+      description: 'Comprehensive tax planning, GST compliance, international tax structuring, and transfer pricing services to optimize your tax position.',
       items: [
-        'Business incorporation',
-        'Contract drafting and review',
-        'Intellectual property protection',
-        'Legal advisory'
+        'Tax planning and optimization',
+        'GST compliance and advisory',
+        'International tax structuring',
+        'Transfer pricing'
       ]
     },
-    {
-      title: 'Due Diligence',
-      icon: <ClipboardCheck className="h-12 w-12 text-[#1e3d8f]" />,
-      description: 'Thorough assessment across financial, legal, operational, and commercial dimensions to identify opportunities and mitigate risks.',
-      items: [
-        'Financial due diligence',
-        'Legal due diligence',
-        'Operational due diligence',
-        'Commercial due diligence'
-      ]
-    },
-    {
-      title: 'Regulatory Compliances',
-      icon: <FileCheck className="h-12 w-12 text-[#1e3d8f]" />,
-      description: 'Navigate India\'s complex regulatory environment with our compliance management, industry-specific regulation handling, and compliance audits.',
-      items: [
-        'Statutory compliance management',
-        'Industry-specific regulations',
-        'Cross-border compliance',
-        'Compliance audits and assessments'
-      ]
-    }
+
+
   ];
 
   return (
