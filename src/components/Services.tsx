@@ -89,8 +89,9 @@ const Services = () => {
         />
         
         <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16">
-          At Emproisys, we provide comprehensive advisory services designed to simplify business operations in India. 
-          Our integrated approach combines taxation expertise, financial insight, and legal knowledge to create pathways for sustainable growth.
+          At Emproisys, we provide comprehensive business consulting services designed to simplify operations in India. 
+          Our integrated approach combines taxation expertise, financial consulting, and legal advisory to create pathways for sustainable growth. 
+          From GST compliance and FDI investment guidance to Employer of Record services, we help Indian and foreign companies establish and expand successfully.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

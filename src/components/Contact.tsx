@@ -52,12 +52,13 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
 
               <form
-                action="https://formsubmit.co/joy.paliwal03@gmail.com" // ✅ Replace this with your actual email
+                action="https://formsubmit.co/nishchint@emproisys.com"
                 method="POST"
               >
                 {/* Optional hidden fields */}
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+                <input type="hidden" name="_next" value="https://emproisys.com/thank-you" />
+                <input type="hidden" name="_subject" value="New Business Inquiry from Emproisys Website" />
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>

@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { FileText, Download } from 'lucide-react';
 import SectionTitle from './common/SectionTitle';
-
-interface Article {
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  image: string;
-}
+import BlogReader from './BlogReader';
+import { blogPosts, BlogPost } from '../data/blogPosts';
 
 interface GuideItem {
   title: string;
@@ -16,29 +10,6 @@ interface GuideItem {
   icon: React.ReactNode;
 }
 
-const blogArticles: Article[] = [
-  {
-    title: "Navigating GST Compliance in India: A Comprehensive Guide",
-    excerpt: "Understanding the complexities of India's Goods and Services Tax system and how businesses can ensure compliance while optimizing their tax position.",
-    date: "May 15, 2025",
-    category: "Taxation",
-    image: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  },
-  {
-    title: "Legal Structures for Foreign Businesses Entering the Indian Market",
-    excerpt: "A comparison of different legal entities available to international companies expanding into India, with pros and cons of each approach.",
-    date: "April 28, 2025",
-    category: "Legal",
-    image: "https://images.pexels.com/photos/5668857/pexels-photo-5668857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  },
-  {
-    title: "Cross-Border Investment Regulations: Recent Changes and Implications",
-    excerpt: "Recent updates to India's foreign direct investment policies and how they impact various sectors and investment strategies.",
-    date: "April 10, 2025",
-    category: "Finance",
-    image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  }
-];
 
 const guideItems: GuideItem[] = [
   {
@@ -60,6 +31,18 @@ const guideItems: GuideItem[] = [
 
 const Resources = () => {
   const [activeTab, setActiveTab] = useState('blog');
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [isReaderOpen, setIsReaderOpen] = useState(false);
+
+  const handlePostClick = (post: BlogPost) => {
+    setSelectedPost(post);
+    setIsReaderOpen(true);
+  };
+
+  const handleCloseReader = () => {
+    setIsReaderOpen(false);
+    setTimeout(() => setSelectedPost(null), 300);
+  };
 
   return (
     <section className="py-20 bg-gray-50">
@@ -109,10 +92,11 @@ const Resources = () => {
           {/* Blog Articles */}
           {activeTab === 'blog' && (
             <div className="grid md:grid-cols-3 gap-8">
-              {blogArticles.map((article, index) => (
+              {blogPosts.map((article, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+                  onClick={() => handlePostClick(article)}
                 >
                   <div className="h-48 overflow-hidden">
                     <img 
@@ -128,12 +112,11 @@ const Resources = () => {
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h3>
                     <p className="text-gray-700 mb-4">{article.excerpt}</p>
-                    <a 
-                      href="#" 
+                    <button 
                       className="text-[#1e3d8f] font-medium hover:text-[#ff7843] transition-colors duration-300"
                     >
                       Read More
-                    </a>
+                    </button>
                   </div>
                 </div>
               ))}
@@ -206,6 +189,12 @@ const Resources = () => {
           )}
         </div>
       </div>
+      
+      <BlogReader
+        isOpen={isReaderOpen}
+        onClose={handleCloseReader}
+        post={selectedPost}
+      />
     </section>
   );
 };

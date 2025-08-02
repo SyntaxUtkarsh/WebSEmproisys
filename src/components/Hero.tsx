@@ -32,6 +32,14 @@ const Hero = () => {
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             Specialized consultation in Taxation, Finance & Commercial Law
           </p>
+          <div className="mb-8 opacity-90">
+            <p className="text-lg mb-2">
+              🏆 95+ Years Collective Experience | 🌟 27+ Clients Served | 🎯 Expert Business Consulting in India
+            </p>
+            <p className="text-base">
+              GST Compliance • FDI Investment • Employer of Record • Legal Advisory • Financial Consulting
+            </p>
+          </div>
           <a
             href="#contact"
             className="inline-flex items-center bg-gradient-to-r from-[#ff7843] to-[#ffb143] text-white px-6 py-3 rounded-md text-lg font-medium transition-transform duration-300 hover:scale-105"
