@@ -81,7 +81,7 @@ const Resources = () => {
                 }`}
                 onClick={() => setActiveTab('blog')}
               >
-                Blog Articles
+                Blogs & Insights
               </button>
               <button
                 className={`px-4 py-2 text-sm font-medium rounded-md ${

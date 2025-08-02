@@ -237,7 +237,7 @@ const EoRPage = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mt-16">
+        {/* <div className="grid md:grid-cols-4 gap-6 mt-16">
           {[
             { icon: <Building className="h-8 w-8" />, value: "100+", label: "Countries Supported" },
             { icon: <Users className="h-8 w-8" />, value: "500+", label: "Professionals Deployed" },
@@ -252,7 +252,7 @@ const EoRPage = () => {
               <div className="text-gray-600 text-sm">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
